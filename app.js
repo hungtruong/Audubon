@@ -15,10 +15,12 @@ app.get('/', function (req, res) {
 
     child.stdout.on('data',
     function (data) {
+        console.log('got some data');
         res.write(data);
     });
 
     child.on('exit', function (exitCode) {
+     console.log('finished');
      res.end();
     });
 
