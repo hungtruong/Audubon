@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
  console.log(req.query.url);
 
 
- var child = spawn('bin/phantomjs',
+ var child = spawn('phantomjs',
      ['test3.js', req.query.url]);
 
     child.stdout.on('data',
