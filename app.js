@@ -2,6 +2,10 @@ var express = require('express')
 var app = express()
 
 app.get('/', function (req, res) {
+  res.send('TODO: Make an index view for this thing')
+})
+
+app.get('/img', function (req, res) {
 
  var spawn = require('child_process').spawn;
 
