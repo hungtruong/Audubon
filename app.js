@@ -8,19 +8,23 @@ app.get('/', function (req, res) {
  // Create a child process
 
  console.log(req.query.url);
-
+ var parts = req.query.url.split('/');
+ var id = parts[parts.length-1];
 
  var child = spawn('phantomjs',
      ['test3.js', req.query.url]);
 
     child.stdout.on('data',
     function (data) {
-        console.log('got some data');
-        res.write(data);
+        //console.log('got some data');
+        //res.write(data);
     });
 
     child.on('exit', function (exitCode) {
-     console.log('finished');
+     //console.log('finished');
+     fs = require('fs')
+     data = fs.readFileSync('/tmp/' + id)
+     res.write(data);
      res.end();
     });
 

@@ -4,6 +4,8 @@ var system = require('system');
 var args = system.args;
 
 var tweet_url = args[1];
+var parts = tweet_url.split('/');
+var id = parts[parts.length-1];
 
 page.open(tweet_url, function    (status) {
     if (status !== 'success') {
@@ -22,7 +24,7 @@ page.open(tweet_url, function    (status) {
                 height: bb.height
             };
 
-	page.render("/dev/stdout", {format: 'png', quality: '100'});
+	page.render("/tmp/" + id, {format: 'png', quality: '100'});
             phantom.exit();
         }, 200);
     }
