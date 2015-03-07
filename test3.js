@@ -9,6 +9,7 @@ page.open(tweet_url, function    (status) {
     if (status !== 'success') {
         console.log('Unable to load the address!');
     } else {
+        console.log('downloading');
         window.setTimeout(function () {
             //Heres the actual difference from your code...
             var bb = page.evaluate(function () {
@@ -23,7 +24,7 @@ page.open(tweet_url, function    (status) {
             };
 
 	page.render("/dev/stdout", {format: 'png', quality: '100'});
-
+            console.log('downloaded');
             phantom.exit();
         }, 200);
     }
