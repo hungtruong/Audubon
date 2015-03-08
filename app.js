@@ -1,17 +1,12 @@
-var express = require('express')
-var app = express()
+var express = require('express');
+var app = express();
+var path = require('path');
+var spawn = require('child_process').spawn;
 
-app.get('/', function (req, res) {
-  res.send('TODO: Make an index view for this thing')
-})
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/img', function (req, res) {
-
- var spawn = require('child_process').spawn;
-
  // Create a child process
-
- console.log(req.query.url);
  var parts = req.query.url.split('/');
  var id = parts[parts.length-1];
 
@@ -31,25 +26,6 @@ app.get('/img', function (req, res) {
      res.write(data);
      res.end();
     });
-
-  /*
-  var exec = require('child_process').exec,
-    child;
-
-  child = exec('phantomjs test3.js',
-  function (error, stdout, stderr) {
-    //console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
-    console.log('exec error: ' + error);
-    if (error == null) {
-      //console.log('exec error: ' + error);
-      console.log('got stuff');
-      res.type('png');
-      res.send(stdout);
-    }
-  });
-  //res.send('Hello World!')
-  */
 })
 
 var server = app.listen(process.env.PORT || 3000, function () {
