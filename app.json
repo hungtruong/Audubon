@@ -1,0 +1,14 @@
+{
+  "name": "Audubon",
+  "description": "An screenshot generator for tweets powered by PhantomJS",
+  "keywords": [
+    "node",
+    "express",
+    "phantomjs"
+  ],
+  "addons": [],
+  "env": {
+    "PATH": "/usr/local/bin:/usr/bin:/bin:/app/vendor/phantomjs/bin",
+    "BUILDPACK_URL": "https://github.com/ddollar/heroku-buildpack-multi.git"
+  }
+}
