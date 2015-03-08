@@ -10,4 +10,8 @@ Deploy it directly to Heroku with this button:
 
 You can try it out in action [here](https://audubon-tweets.herokuapp.com)
 
+Here's an example:
+
+![hi twitters!](https://audubon-tweets.herokuapp.com/img/?url=https://twitter.com/oprah/status/1542224596)
+
 Let me know if you think this is cool.
