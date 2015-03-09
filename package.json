@@ -1,14 +1,18 @@
 {
-  "name": "twitcap",
+  "name": "Audubon",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An screenshot generator for tweets powered by PhantomJS",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start" : "node app.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": 
+  { "name" : "Hung TRuong"
+  , "email" : "hung@hung-truong.com"
+  , "url" : "http://www.hung-truong.com/"
+  }
+  "license": "MIT",
   "dependencies": {
     "express": "^4.12.2"
   },
