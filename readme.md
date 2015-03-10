@@ -17,5 +17,3 @@ phantomjs tweet_image.js https://twitter.com/shaq/status/1542241989
 ```
 
 Currently, the script saves the image to /tmp but it should really support an output file as an optional argument.
-
-Let me know if you think this is cool.
