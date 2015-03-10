@@ -10,4 +10,10 @@ Deploy it directly to Heroku with this button:
 
 You can try it out in action [here](https://audubon-tweets.herokuapp.com)
 
-Let me know if you think this is cool.
+Alternatively, tweet_image.js can be used as a command line tool that takes a url of a tweet as an argument. An example use case is:
+
+```
+phantomjs tweet_image.js https://twitter.com/shaq/status/1542241989
+```
+
+Currently, the script saves the image to /tmp but it should really support an output file as an optional argument.
