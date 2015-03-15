@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Landing Page template</title>
+		<title>Audubon: A Tweet Screenshot Generator</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -20,20 +20,32 @@
 	<body>
 <div class="container-full">
 
+						<div class="row">
+							<div class="col-lg-12">
+								<span class="input-group-btn">
+									<a href="javascript:(function(){u=window.location.href;if(!u.match(/^https?:\/\/(www[.])?twitter[.]/i)){alert(%27Please go to a single Tweet page first.%27);return} location.href='http://audubon-tweets.herokuapp.com/img?url='+encodeURIComponent(location.href)})()
+" class="btn btn-lg btn-info" role="button">Tweet to Screenshot Bookmarklet</a>
+								</span>
+							</div>
+						</div>
+
       <div class="row">
 
         <div class="col-lg-12 text-center v-center">
 
           <h1>Audubon</h1>
-          <p class="lead">A tweet image generator</p>
+          <p class="lead">A Tweet Screenshot Generator</p>
 
           <br><br><br>
 
           <form class="col-lg-12">
             <div class="input-group" style="width:500px;text-align:center;margin:0 auto;">
             <input id="tweet-url-input" class="form-control input-lg" title="Enter the tweet's URL here." placeholder="Paste Tweet URL Here" type="text">
-              <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit" id="ok-button">OK</button></span>
+              <span class="input-group-btn">
+															<button class="btn btn-lg btn-primary" type="submit" id="ok-button">OK</button>
+														</span>
             </div>
+
 												<!--
 												<div class="input-group form-input">
 												<label class="checkbox-inline">
