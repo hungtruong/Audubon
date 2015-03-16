@@ -13,4 +13,9 @@ $( document ).ready(function() {
      event.preventDefault();
     });
 
+    $('#lucky-button').click(function(){
+     $("#tweet-url-input").val('https://twitter.com/oprah/status/1542224596');
+     $('form').submit();
+    });
+
 });
